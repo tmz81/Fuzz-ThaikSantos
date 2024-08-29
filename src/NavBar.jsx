@@ -41,7 +41,10 @@ function NavBar({ mode, toggleColorMode }) {
 
   const renderMenuItems = () =>
     sections.map(({ id, label }) => (
-      <MenuItem key={id} onClick={() => scrollToSection(id)}>
+      <MenuItem
+        key={id}
+        onClick={() => scrollToSection(id)}
+      >
         <Typography variant="h5" color="text.primary">
           {label}
         </Typography>
@@ -63,7 +66,7 @@ function NavBar({ mode, toggleColorMode }) {
           <Toolbar
             sx={(theme) => ({
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: { xs: "space-between", md: "space-evenly" },
               alignItems: "center",
               borderRadius: "999px",
               bgcolor:
