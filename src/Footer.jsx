@@ -8,7 +8,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Copyright() {
   return (
-    <Typography variant="h6" color="text.primary" mt={1}>
+    <Typography variant="h4" color="text.primary" mt={1}>
       <Link href="mailto:thaik.ttt@gmail.com">thaik.ttt@gmail.com&nbsp;</Link>
     </Typography>
   );
@@ -34,14 +34,14 @@ export default function Footer() {
           textAlign: "center",
         }}
       >
-        <Typography component="h2" variant="h4" color="text.primary">
+        <Typography variant="h1" color="text.primary">
           Contato
         </Typography>
       </Box>
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column", 
+          flexDirection: "column",
           alignItems: "center",
           width: "100%",
           pt: { xs: 4, sm: 8 },
@@ -60,7 +60,6 @@ export default function Footer() {
             sx={{
               justifyContent: "center",
               color: "text.secondary",
-
             }}
           >
             <IconButton
@@ -68,7 +67,7 @@ export default function Footer() {
               href="https://www.instagram.com/thaik.ttt/"
               aria-label="Instagram"
             >
-              <InstagramIcon />
+              <InstagramIcon fontSize="large" />
             </IconButton>
           </Stack>
         </Box>

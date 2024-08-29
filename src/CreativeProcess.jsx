@@ -45,7 +45,7 @@ export default function CreativeProcess() {
           textAlign: "center",
         }}
       >
-        <Typography component="h2" variant="h4" color="text.primary">
+        <Typography variant="h1" color="text.primary">
           Processo Criativo
         </Typography>
       </Box>

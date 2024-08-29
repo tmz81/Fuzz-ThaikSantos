@@ -29,7 +29,7 @@ function Video() {
       <YouTube
         videoId="BWoY-OFQxU0"
         opts={opts}
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: "18px", }}
         onReady={onReady}
       />
     </div>

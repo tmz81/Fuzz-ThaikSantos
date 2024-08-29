@@ -39,7 +39,7 @@ export default function Telas() {
           textAlign: "center",
         }}
       >
-        <Typography component="h2" variant="h4" color="text.primary">
+        <Typography variant="h1" gutterBottom color="text.primary">
           Telas
         </Typography>
       </Box>
