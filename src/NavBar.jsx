@@ -1,17 +1,26 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-
-import Box from "@mui/material/Box";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
-import Typography from "@mui/material/Typography";
-import MenuItem from "@mui/material/MenuItem";
-import Drawer from "@mui/material/Drawer";
+import {
+  AppBar,
+  Toolbar,
+  Button,
+  Container,
+  Box,
+  MenuItem,
+  Typography,
+  Drawer,
+  Divider,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ToggleColorMode from "./ToggleColorMode";
+
+const sections = [
+  { id: "bio", label: "Bio" },
+  { id: "telas", label: "Telas" },
+  { id: "tattoos", label: "Tattoos" },
+  { id: "creativeProcess", label: "Processo Criativo" },
+  { id: "contact", label: "Contato" },
+];
 
 function NavBar({ mode, toggleColorMode }) {
   const [open, setOpen] = React.useState(false);
@@ -25,14 +34,19 @@ function NavBar({ mode, toggleColorMode }) {
     const offset = 128;
     if (sectionElement) {
       const targetScroll = sectionElement.offsetTop - offset;
-      sectionElement.scrollIntoView({ behavior: "smooth" });
-      window.scrollTo({
-        top: targetScroll,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: targetScroll, behavior: "smooth" });
       setOpen(false);
     }
   };
+
+  const renderMenuItems = () =>
+    sections.map(({ id, label }) => (
+      <MenuItem key={id} onClick={() => scrollToSection(id)}>
+        <Typography variant="h5" color="text.primary">
+          {label}
+        </Typography>
+      </MenuItem>
+    ));
 
   return (
     <div>
@@ -47,12 +61,10 @@ function NavBar({ mode, toggleColorMode }) {
       >
         <Container maxWidth="lg">
           <Toolbar
-            variant="regular"
             sx={(theme) => ({
               display: "flex",
-              alignItems: "center",
               justifyContent: "space-between",
-              flexShrink: 0,
+              alignItems: "center",
               borderRadius: "999px",
               bgcolor:
                 theme.palette.mode === "light"
@@ -68,118 +80,28 @@ function NavBar({ mode, toggleColorMode }) {
                   : "0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)",
             })}
           >
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                px: 0,
-              }}
-            >
-              <Box
-                sx={{
-                  display: { xs: "none", md: "flex" },
-                }}
-              >
-                <MenuItem
-                  onClick={() => scrollToSection("bio")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Bio
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection("telas")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Telas
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection("tattoos")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Tattoos
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection("creativeProcess")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Processo Criativo
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection("contact")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Contato
-                  </Typography>
-                </MenuItem>
-              </Box>
+            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
+              {renderMenuItems()}
             </Box>
-            <Box
-              sx={{
-                display: { xs: "none", md: "flex" },
-                gap: 0.5,
-                alignItems: "center",
-              }}
-            >
+            <Box sx={{ display: "flex", gap: 0.5 }}>
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
             </Box>
-            <Box sx={{ display: { sm: "", md: "none" } }}>
+            <Box sx={{ display: { md: "none" } }}>
               <Button
-                variant="text"
-                color="primary"
-                aria-label="menu"
                 onClick={toggleDrawer(true)}
                 sx={{ minWidth: "30px", p: "4px" }}
               >
                 <MenuIcon />
               </Button>
               <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-                <Box
-                  sx={{
-                    minWidth: "60dvw",
-                    p: 2,
-                    backgroundColor: "background.paper",
-                    flexGrow: 1,
-                  }}
-                >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "end",
-                      flexGrow: 1,
-                    }}
-                  >
+                <Box sx={{ minWidth: "60vw", p: 2 }}>
+                  <Box sx={{ display: "flex", justifyContent: "end" }}>
                     <ToggleColorMode
                       mode={mode}
                       toggleColorMode={toggleColorMode}
                     />
                   </Box>
-                  <MenuItem onClick={() => scrollToSection("bio")}>
-                    Bio
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("telas")}>
-                    Telas
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("tattoos")}>
-                    Tattoos
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("creativeProcess")}>
-                    Processo Criativo
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("contact")}>
-                    Contato
-                  </MenuItem>
+                  {renderMenuItems()}
                   <Divider />
                 </Box>
               </Drawer>
