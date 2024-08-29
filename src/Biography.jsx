@@ -23,41 +23,45 @@ export default function Biography() {
         <Grid item xs={12} md={6}>
           <Box>
             <Typography
-              component="h2"
-              variant="h4"
+              variant="h1"
               color="text.primary"
-              sx={{ mb: 8, mt: 4 }}
+              gutterBottom
+              sx={{ mb: 2, mt: 2 }}
             >
               {textBio.title}
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="text.secondary"
-              sx={{ mb: { xs: 2, sm: 4 } }}
+              sx={{ mb: { xs: 2 }, fontSize: { xs: 16, md: 21 } }}
             >
               Sou brasileiro, natural de Recife-PE. Sou artista plástico e
               tatuador, além de arte educador graduado em Artes Visuais pela
               Universidade Federal de Pernambuco (2019).
             </Typography>
-            <Typography variant="body1" color="text.secondary">
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ mb: { xs: 2 }, fontSize: { xs: 16, md: 21 } }}
+            >
               Meu trabalho tem como principal característica a estética
               rebuscada e urbana com texturas e pinceladas fluidas. Costumo
               resumir que grito através dos pincéis com gestuais guiados por
               tambores e guitarras distorcidas.
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="text.secondary"
-              sx={{ mb: { xs: 2, sm: 4 } }}
+              sx={{ mb: { xs: 2 }, fontSize: { xs: 16, md: 21 } }}
             >
               Tanto em telas quanto na tatuagem, minha produção é influenciada
               por movimentos contemporâneos como o neoexpressionismo e
               expressionismo abstrato.
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="text.secondary"
-              sx={{ mb: { xs: 2, sm: 4 } }}
+              sx={{ fontSize: { xs: 16, md: 21 } }}
             >
               Premiações e exposições coletivas:
               <br />
@@ -76,12 +80,7 @@ export default function Biography() {
             </Typography>
           </Box>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ display: "flex", width: "100%" }}
-        >
+        <Grid item xs={12} md={6} sx={{ display: "flex", width: "100%" }}>
           <Swiper
             modules={[Autoplay]}
             spaceBetween={50}
@@ -111,6 +110,7 @@ export default function Biography() {
                       maxWidth: "100%",
                       width: "auto",
                       mx: "auto",
+                      borderRadius: 8,
                     }}
                     src={img.src}
                     alt={img.alt}
