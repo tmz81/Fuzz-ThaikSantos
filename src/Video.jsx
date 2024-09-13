@@ -17,6 +17,7 @@ function Video() {
   return (
     <div style={{
       position: 'relative', 
+      borderRadius: 14,
       width: '100%', 
       paddingTop: '56.25%', // Proporção para telas menores
       '@media (min-width:600px)': {
@@ -29,7 +30,7 @@ function Video() {
       <YouTube
         videoId="BWoY-OFQxU0"
         opts={opts}
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: "18px", }}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: 14, }}
         onReady={onReady}
       />
     </div>

@@ -23,7 +23,7 @@ export default function Biography() {
         <Grid item xs={12} md={6}>
           <Box>
             <Typography
-              variant="h1"
+              variant="h2"
               color="text.primary"
               gutterBottom
               sx={{ mb: 2, mt: 2 }}
@@ -31,18 +31,18 @@ export default function Biography() {
               {textBio.title}
             </Typography>
             <Typography
-              variant="body2"
+              variant="body1"
               color="text.secondary"
-              sx={{ mb: { xs: 2 }, fontSize: { xs: 16, md: 21 } }}
+              sx={{ mb: { xs: 2}, fontSize: 16 }}
             >
               Sou brasileiro, natural de Recife-PE. Sou artista plástico e
               tatuador, além de arte educador graduado em Artes Visuais pela
               Universidade Federal de Pernambuco (2019).
             </Typography>
             <Typography
-              variant="body2"
+              variant="body1"
               color="text.secondary"
-              sx={{ mb: { xs: 2 }, fontSize: { xs: 16, md: 21 } }}
+              sx={{ mb: { xs: 2 }, fontSize: 16 }}
             >
               Meu trabalho tem como principal característica a estética
               rebuscada e urbana com texturas e pinceladas fluidas. Costumo
@@ -50,9 +50,9 @@ export default function Biography() {
               tambores e guitarras distorcidas.
             </Typography>
             <Typography
-              variant="body2"
+              variant="body1"
               color="text.secondary"
-              sx={{ mb: { xs: 2 }, fontSize: { xs: 16, md: 21 } }}
+              sx={{ mb: { xs: 2 }, fontSize: 16 }}
             >
               Tanto em telas quanto na tatuagem, minha produção é influenciada
               por movimentos contemporâneos como o neoexpressionismo e
@@ -61,7 +61,6 @@ export default function Biography() {
             <Typography
               variant="body2"
               color="text.secondary"
-              sx={{ fontSize: { xs: 16, md: 21 } }}
             >
               Premiações e exposições coletivas:
               <br />

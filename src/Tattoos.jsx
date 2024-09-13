@@ -107,6 +107,7 @@ export default function Tattoos() {
                       width: "auto",
                       mx: "auto",
                       cursor: "pointer",
+                      borderRadius: 4
                     }}
                     src={img.src}
                     alt={img.alt}

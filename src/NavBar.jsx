@@ -45,7 +45,7 @@ function NavBar({ mode, toggleColorMode }) {
         key={id}
         onClick={() => scrollToSection(id)}
       >
-        <Typography variant="h5" color="text.primary">
+        <Typography variant="h6" color="text.primary">
           {label}
         </Typography>
       </MenuItem>

@@ -64,6 +64,7 @@ export default function Telas() {
                   width: "auto",
                   mx: "auto",
                   cursor: "pointer",
+                  borderRadius: 4
                 }}
                 src={img.src}
                 alt={img.alt}
@@ -88,7 +89,7 @@ export default function Telas() {
           <img
             src={currentImage.src}
             alt={currentImage.alt}
-            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+            style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: 4 }}
           />
         </Box>
       </Modal>
