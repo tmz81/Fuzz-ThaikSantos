@@ -19,6 +19,7 @@ import processos3 from "./assets/processos3.webp";
 import processos4 from "./assets/processos4.webp";
 import processos5 from "./assets/processos5.webp";
 import processos6 from "./assets/processos6.webp";
+import processos7 from "./assets/processos7.webp";
 
 export const textBio = {
   title: "Thaik Santos",
@@ -97,24 +98,29 @@ export const imgProcess = [
     src: processos1,
     alt: "Processo 1",
   },
+  // {
+  //   src: processos2,
+  //   alt: "Processo 2",
+  // },
   {
-    src: processos2,
-    alt: "Processo 2",
+    src: processos7,
+    alt: "Processos7"
   },
   {
     src: processos3,
     alt: "Processo 3",
   },
-  {
-    src: processos4,
-    alt: "Processo 4",
-  },
-  {
-    src: processos5,
-    alt: "Processo 5",
-  },
-  {
-    src: processos6,
-    alt: "Processo 6",
-  },
+  // {
+  //   src: processos4,
+  //   alt: "Processo 4",
+  // },
+  // {
+  //   src: processos5,
+  //   alt: "Processo 5",
+  // },
+  // {
+  //   src: processos6,
+  //   alt: "Processo 6",
+  // },
+  
 ];
