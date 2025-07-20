@@ -17,7 +17,7 @@ import ToggleColorMode from "./ToggleColorMode";
 const sections = [
   { id: "bio", label: "Bio" },
   { id: "telas", label: "Telas" },
-  // { id: "tattoos", label: "Tattoos" },
+  { id: "tattoos", label: "Tattoos" },
   { id: "creativeProcess", label: "Processo Criativo" },
   { id: "contact", label: "Contato" },
 ];

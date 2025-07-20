@@ -72,7 +72,7 @@ export default function LandingPage() {
         <Box sx={{ bgcolor: "background.default" }}>
           <Biography />
           <Telas />
-          {/* <Tattoos /> */}
+          <Tattoos />
           <CreativeProcess />
           <Footer />
         </Box>
