@@ -115,7 +115,7 @@ export default function CreativeProcess() {
       </Grid>
       <Grid container spacing={2}>
       <Grid item xs={12} sm={12} md={12} sx={{ mt: 14 }}>
-        {/*<Video /> */}
+        <Video />
       </Grid>
     </Grid>
       <Modal
@@ -131,6 +131,7 @@ export default function CreativeProcess() {
             <CloseIcon />
           </IconButton>
           <img
+            loading="lazy"
             src={currentImage.src}
             alt={currentImage.alt}
             style={{ width: "100%", height: "100%", objectFit: "contain" }}

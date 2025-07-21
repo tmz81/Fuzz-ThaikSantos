@@ -87,6 +87,7 @@ export default function Telas() {
             <CloseIcon />
           </IconButton>
           <img
+            loading="lazy"
             src={currentImage.src}
             alt={currentImage.alt}
             style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: 4 }}
