@@ -53,7 +53,7 @@ export default function Biography() {
               color="text.secondary"
               sx={{ mb: { xs: 2 }, fontSize: 16 }}
             >
-              Minha produção é influenciada
+              Tanto em telas quanto na tatuagem, minha produção é influenciada
               por movimentos contemporâneos como o neoexpressionismo e
               expressionismo abstrato.
             </Typography>
