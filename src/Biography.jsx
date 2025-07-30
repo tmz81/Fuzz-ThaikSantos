@@ -35,7 +35,7 @@ export default function Biography() {
               color="text.secondary"
               sx={{ mb: { xs: 2}, fontSize: 16 }}
             >
-              Sou brasileiro, natural de Recife-PE. Sou artista plástico e arte educador graduado em Artes Visuais pela
+              Sou brasileiro, natural de Recife-PE. Sou artista plástico, tatuador e arte educador graduado em Artes Visuais pela
               Universidade Federal de Pernambuco (2019).
             </Typography>
             <Typography
